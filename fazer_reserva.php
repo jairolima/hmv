@@ -3,9 +3,6 @@
     include("db/dbconnect.php");
 ?>
 
-<html>
-
-<head>
 <script language="JavaScript" >
         function enviardados(){
           
@@ -38,8 +35,6 @@
         }
           
         </script>
-</head>
-
 
 <br>
 <div class="container">
@@ -48,7 +43,7 @@
         <h5 class="text-primary" >Preencha os campos para fazer uma reserva!</h5><br>
         <form method="post" action="reservar.php" name="dados" onSubmit="return enviardados();">
 
-		 <?php
+             <?php
          error_reporting(0);
          $verifica =  mysqli_query($conexao,"SELECT ocupado FROM suite WHERE ocupado='N' AND tipo='individual';");
 
@@ -109,13 +104,13 @@
 
             <?php } ?>
 
-            <br>Nome :<input type="text" name="nome" placeholder="Nome" id="tx_nome" />
-            CPF :<input type="text" name="cpf" placeholder="Cpf" id="tx_cpf" />
-            E-mail :<input type="text" name="email" placeholder="E-mail" id="tx_email" />
-            Senha :<input type="text" name="senha" placeholder="Senha" required /><br>
+            <br>Nome :<input type="text" name="nome" placeholder="Nome" id="tx_nome"/>
+            CPF :<input type="text" name="cpf" placeholder="Cpf" id="tx_cpf"/>
+            E-mail :<input type="text" name="email" placeholder="E-mail" id="tx_email"/>
+            Senha :<input type="text" name="senha" placeholder="Senha" required/><br>
            
-            <br>Chegada:<input type="date" name="chegada" id="tx_data" required/>
-            Saída:<input type="date" name="saida" id="tx_data" required/>
+            <br>Chegada:<input type="date" name="chegada" required/>
+            Saída:<input type="date" name="saida" required/>
             Adulto(s):<input type="number" name="adulto" min="1" max="3" step="1" value="1"/>
             Criança:<input type="number" name="crianca" min="0" max="2" step="1" value="0"/>
             Idade da criança:<input type="number" name="idade" min="0" max="7" step="1" value="0"/><br>
@@ -124,20 +119,3 @@
         </form>
     </div> 
 </div>
-
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
