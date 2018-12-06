@@ -29,7 +29,7 @@
          if ($quartosnaoocupados > 0) { ?>
 
            <input type="radio" name="tipo" value="Individual" checked> Individual <br>
-           <?php echo $qtdquartos; ?>
+        
 
            <?php } ?>
 
@@ -52,7 +52,7 @@
          if ($quartosnaoocupadoscasal > 0) { ?>
 
            <input type="radio" name="tipo" value="Casal Simples" checked> Casal Simples <br>
-           <?php echo $qtdquartoscasal; ?>
+           
 
            <?php } ?>
 
